@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop | easyBuy</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="site-header"></div><main class="container page-main"><div class="page-title row-between"><div><h1 id="shop-title">Shop all products</h1><p class="muted">Everyday essentials, all in one place.</p></div>
+<select id="sort-products" aria-label="Sort products"><option value="">Featured</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option><option value="rating">Top rated</option></select></div>
+<div class="shop-categories" id="chips"></div>
+<form class="panel filters" id="filters"><div><label for="brand">Brand</label><input id="brand" placeholder="Any brand"></div><div><label for="minPrice">Min price (₹)</label><input id="minPrice" type="number" min="0"></div><div><label for="maxPrice">Max price (₹)</label><input id="maxPrice" type="number" min="0"></div>
+<div><label for="minRating">Rating</label><select id="minRating"><option value="">Any</option><option value="4">4★ &amp; above</option><option value="3">3★ &amp; above</option><option value="2">2★ &amp; above</option></select></div><button class="btn primary">Apply</button></form>
+<div class="product-grid" id="shop-products"></div></main><div id="site-footer"></div>
+<script src="js/common.js"></script>
+<script src="js/shop.js"></script>
+</body>
+</html>

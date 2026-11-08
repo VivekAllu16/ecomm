@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create Account | easyBuy</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="site-header"></div><main class="auth-wrap"><form class="auth-card" id="f"><h1>Create Your Account</h1><p class="muted">Join easyBuy for a simpler way to shop.</p>
+<label for="name">Full Name</label><input id="name" type="text" placeholder="Enter your name" required>
+<label for="email">Email Address</label><input id="email" type="email" placeholder="abcd@gmail.com" required>
+<label for="phoneNo">Mobile Number</label><input id="phoneNo" type="tel" placeholder="Enter 10-digit mobile number" pattern="[0-9]{10}" maxlength="10" required>
+<label for="password">Password</label><input id="password" type="password" placeholder="Minimum 8 characters" minlength="8" required>
+<label for="confirmPassword">Confirm Password</label><input id="confirmPassword" type="password" placeholder="Re-enter password" required>
+<label for="securityQuestionId">Security Question</label><select id="securityQuestionId"><option value="1">What is your favorite color?</option><option value="2">What is your childhood nickname?</option><option value="3">What is your favorite Person's name?</option></select>
+<label for="securityAnswer">Security Answer</label><input id="securityAnswer" type="text" placeholder="Your answer" required>
+<p class="form-message" id="m"></p><button class="btn primary full" type="submit">Create Account</button>
+<p class="auth-switch">Already have an account? <a href="login.html">Log In</a></p></form></main><div id="site-footer"></div>
+<script src="js/common.js"></script>
+<script src="js/register.js"></script>
+</body>
+</html>
