@@ -1,14 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Checkout | easyBuy</title>
-<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout | easyBuy</title>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-<div class="co-head"><div class="container"><a class="brand" href="index.html"><img src="images/Designer.png" alt="easyBuy" class="brand-logo" onerror="this.outerHTML='easyBuy'"></a><h1>Checkout</h1></div></div><main class="container page-main" id="co" style="padding-top:24px"><p class="muted">Loading…</p></main><div id="toast"></div>
-<script src="js/common.js"></script>
-<script src="js/checkout.js"></script>
+
+    <!-- Checkout Header -->
+    <header class="co-head">
+        <div class="container">
+
+            <!-- Brand Logo -->
+            <a class="brand" href="index.html">
+                <img
+                    src="images/Designer.png"
+                    alt="easyBuy"
+                    class="brand-logo"
+                    onerror="this.outerHTML='easyBuy'"
+                >
+            </a>
+
+            <h1>Checkout</h1>
+
+        </div>
+    </header>
+
+    <!-- Checkout Main Content -->
+    <main
+        class="container page-main"
+        id="co"
+        style="padding-top: 24px;"
+    >
+        <p class="muted">Loading…</p>
+    </main>
+
+    <!-- Toast Notification -->
+    <div id="toast"></div>
+
+    <!-- JavaScript Files -->
+    <script src="js/common.js"></script>
+    <script src="js/checkout.js"></script>
+
 </body>
+
 </html>
