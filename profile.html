@@ -1,30 +1,314 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Profile | easyBuy</title>
-<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Profile | easyBuy</title>
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-<div id="site-header"></div><main class="container page-main"><div class="page-title"><h1>My Profile</h1><p class="muted">Manage your personal details and shopping preferences.</p></div><div class="profile-layout">
-<aside class="profile-nav"><div class="profile-avatar" id="av">👤</div><h3 id="nm">Your account</h3><p class="muted small" id="em"></p>
-<a id="n-info" href="#info">Personal Information</a><a id="n-orders" href="#orders">My Orders</a><a id="n-address" href="#address">Addresses</a><a id="n-password" href="#password">Change Password</a><button id="lo" class="nav-logout">Log Out</button></aside>
-<section class="panel profile-panel">
-<div class="tab" id="t-info"><div class="panel-heading"><h2>Personal Information</h2><p class="muted">Keep your account details up to date.</p></div>
-<form id="pf" class="profile-form"><div class="field-grid"><div><label for="name">Full Name</label><input id="name" required></div><div><label for="email">Email Address</label><input id="email" type="email" required></div>
-<div><label for="phoneNo">Phone Number</label><input id="phoneNo" type="tel" maxlength="10" required></div><div><label for="alternativePhoneNo">Alternate Phone Number</label><input id="alternativePhoneNo" type="tel" maxlength="10" required></div>
-<div><label for="gender">Gender</label><select id="gender" required><option value="">Select Gender</option><option value="Male">Male</option><option value="Female">Female</option><option value="Other">Other</option></select></div><div><label for="birthday">Date of Birth</label><input id="birthday" type="date" required></div></div>
-<div class="form-actions"><span class="form-message" id="pm"></span><button type="submit" class="btn primary">Make Changes</button></div></form></div>
-<div class="tab" id="t-orders"><div class="panel-heading"><h2>My Orders</h2><p class="muted">Track, pay for or cancel your orders.</p></div><div id="ol"></div></div>
-<div class="tab" id="t-address"><div class="panel-heading"><h2>My Addresses</h2><p class="muted">Manage where your orders are delivered.</p></div><div id="al"></div>
-<button type="button" id="addNew" class="btn primary" style="margin-top:18px">＋ Add New Address</button>
-<form id="af" class="profile-form" style="display:none"><div class="field-grid"><div><label for="houseNo">House Number</label><input id="houseNo" required></div><div><label for="streetName">Street Name</label><input id="streetName" required></div><div><label for="city">City</label><input id="city" required></div><div><label for="state">State</label><input id="state" required></div><div><label for="country">Country</label><input id="country" value="India" required></div><div><label for="pincode">Pincode</label><input id="pincode" maxlength="6" required></div></div>
-<label style="display:flex;gap:8px;align-items:center"><input type="checkbox" id="isPrimary" style="width:auto"> Make this my primary address</label><div class="form-actions"><button type="button" class="btn outline" id="cancelA">Cancel</button><button class="btn primary">Save Address</button></div></form></div>
-<div class="tab" id="t-password"><div class="panel-heading"><h2>Change Password</h2><p class="muted">Use a strong password you don't use elsewhere.</p></div>
-<form id="cf" class="profile-form" style="max-width:420px"><label for="oldPassword">Current Password</label><input id="oldPassword" type="password" required><label for="newPassword">New Password</label><input id="newPassword" type="password" required><label for="confirmNewPassword">Confirm New Password</label><input id="confirmNewPassword" type="password" required><p class="form-message" id="cm"></p><button class="btn primary">Change Password</button></form></div>
-</section></div></main><div id="site-footer"></div>
-<script src="js/common.js"></script>
-<script src="js/profile.js"></script>
+
+    <!-- Header -->
+    <div id="site-header"></div>
+
+    <!-- Main Content -->
+    <main class="container page-main">
+
+        <!-- Page Title -->
+        <div class="page-title">
+            <h1>My Profile</h1>
+            <p class="muted">
+                Manage your personal details and shopping preferences.
+            </p>
+        </div>
+
+        <!-- Profile Layout -->
+        <div class="profile-layout">
+
+            <!-- Profile Navigation -->
+            <aside class="profile-nav">
+
+                <div class="profile-avatar" id="av">👤</div>
+
+                <h3 id="nm">Your account</h3>
+                <p class="muted small" id="em"></p>
+
+                <a id="n-info" href="#info">Personal Information</a>
+                <a id="n-orders" href="#orders">My Orders</a>
+                <a id="n-address" href="#address">Addresses</a>
+                <a id="n-password" href="#password">Change Password</a>
+
+                <button id="lo" class="nav-logout">
+                    Log Out
+                </button>
+
+            </aside>
+
+            <!-- Profile Content -->
+            <section class="panel profile-panel">
+
+                <!-- Personal Information Tab -->
+                <div class="tab" id="t-info">
+
+                    <div class="panel-heading">
+                        <h2>Personal Information</h2>
+                        <p class="muted">
+                            Keep your account details up to date.
+                        </p>
+                    </div>
+
+                    <form id="pf" class="profile-form">
+
+                        <div class="field-grid">
+
+                            <div>
+                                <label for="name">Full Name</label>
+                                <input id="name" required>
+                            </div>
+
+                            <div>
+                                <label for="email">Email Address</label>
+                                <input
+                                    id="email"
+                                    type="email"
+                                    required
+                                >
+                            </div>
+
+                            <div>
+                                <label for="phoneNo">Phone Number</label>
+                                <input
+                                    id="phoneNo"
+                                    type="tel"
+                                    maxlength="10"
+                                    required
+                                >
+                            </div>
+
+                            <div>
+                                <label for="alternativePhoneNo">
+                                    Alternate Phone Number
+                                </label>
+                                <input
+                                    id="alternativePhoneNo"
+                                    type="tel"
+                                    maxlength="10"
+                                    required
+                                >
+                            </div>
+
+                            <div>
+                                <label for="gender">Gender</label>
+                                <select id="gender" required>
+                                    <option value="">Select Gender</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="birthday">Date of Birth</label>
+                                <input
+                                    id="birthday"
+                                    type="date"
+                                    required
+                                >
+                            </div>
+
+                        </div>
+
+                        <div class="form-actions">
+                            <span class="form-message" id="pm"></span>
+
+                            <button type="submit" class="btn primary">
+                                Make Changes
+                            </button>
+                        </div>
+
+                    </form>
+
+                </div>
+
+                <!-- My Orders Tab -->
+                <div class="tab" id="t-orders">
+
+                    <div class="panel-heading">
+                        <h2>My Orders</h2>
+                        <p class="muted">
+                            Track, pay for or cancel your orders.
+                        </p>
+                    </div>
+
+                    <div id="ol"></div>
+
+                </div>
+
+                <!-- Addresses Tab -->
+                <div class="tab" id="t-address">
+
+                    <div class="panel-heading">
+                        <h2>My Addresses</h2>
+                        <p class="muted">
+                            Manage where your orders are delivered.
+                        </p>
+                    </div>
+
+                    <div id="al"></div>
+
+                    <button
+                        type="button"
+                        id="addNew"
+                        class="btn primary"
+                        style="margin-top: 18px;"
+                    >
+                        ＋ Add New Address
+                    </button>
+
+                    <!-- Add Address Form -->
+                    <form
+                        id="af"
+                        class="profile-form"
+                        style="display: none;"
+                    >
+
+                        <div class="field-grid">
+
+                            <div>
+                                <label for="houseNo">House Number</label>
+                                <input id="houseNo" required>
+                            </div>
+
+                            <div>
+                                <label for="streetName">Street Name</label>
+                                <input id="streetName" required>
+                            </div>
+
+                            <div>
+                                <label for="city">City</label>
+                                <input id="city" required>
+                            </div>
+
+                            <div>
+                                <label for="state">State</label>
+                                <input id="state" required>
+                            </div>
+
+                            <div>
+                                <label for="country">Country</label>
+                                <input
+                                    id="country"
+                                    value="India"
+                                    required
+                                >
+                            </div>
+
+                            <div>
+                                <label for="pincode">Pincode</label>
+                                <input
+                                    id="pincode"
+                                    maxlength="6"
+                                    required
+                                >
+                            </div>
+
+                        </div>
+
+                        <label style="display: flex; gap: 8px; align-items: center;">
+                            <input
+                                type="checkbox"
+                                id="isPrimary"
+                                style="width: auto;"
+                            >
+                            Make this my primary address
+                        </label>
+
+                        <div class="form-actions">
+
+                            <button
+                                type="button"
+                                class="btn outline"
+                                id="cancelA"
+                            >
+                                Cancel
+                            </button>
+
+                            <button class="btn primary">
+                                Save Address
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+                <!-- Change Password Tab -->
+                <div class="tab" id="t-password">
+
+                    <div class="panel-heading">
+                        <h2>Change Password</h2>
+                        <p class="muted">
+                            Use a strong password you don't use elsewhere.
+                        </p>
+                    </div>
+
+                    <form
+                        id="cf"
+                        class="profile-form"
+                        style="max-width: 420px;"
+                    >
+
+                        <label for="oldPassword">Current Password</label>
+                        <input
+                            id="oldPassword"
+                            type="password"
+                            required
+                        >
+
+                        <label for="newPassword">New Password</label>
+                        <input
+                            id="newPassword"
+                            type="password"
+                            required
+                        >
+
+                        <label for="confirmNewPassword">
+                            Confirm New Password
+                        </label>
+                        <input
+                            id="confirmNewPassword"
+                            type="password"
+                            required
+                        >
+
+                        <p class="form-message" id="cm"></p>
+
+                        <button class="btn primary">
+                            Change Password
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <div id="site-footer"></div>
+
+    <!-- JavaScript Files -->
+    <script src="js/common.js"></script>
+    <script src="js/profile.js"></script>
+
 </body>
+
 </html>
